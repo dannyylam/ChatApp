@@ -10,7 +10,7 @@ This is the first screen users view once the app loads. Registration is required
 
 We utilize Firebase for Authentication (Login and Registration). Profile images use a Storage service which Firebase provides as well.
 
-<img src="Screen Shot 2020-01-16 at 12.39.09 AM.png"> 
+<img src="ChatApp_Screenshots/Screen Shot 2020-01-16 at 12.39.09 AM.png"> 
  
 **Login**<br>
 By selecting the Login button from the segmented control, users are presented the Login form. A successful authentication directs users to their Active Messages screen.
@@ -18,7 +18,7 @@ By selecting the Login button from the segmented control, users are presented th
 Email and Password fields are Authenticated against ‘users’ stored in the Firebase database. Analytical data, specifically creation date and login dates are recorded in Firebase Authentication.
 
 
-<img src="Screen Shot 2020-01-16 at 12.39.25 AM.png"> 
+<img src="ChatApp_Screenshots/Screen Shot 2020-01-16 at 12.39.25 AM.png"> 
 
 **Messages**<br>
 User’s active messages are displayed here. In the navigation bar, the user’s name and profile image are displayed. A Create New Message button is displayed on the right side, (plus sign). Logout button is displayed on the left.
@@ -27,7 +27,7 @@ Messages are displayed through a UITableViewController.
 We utilize a function to retrieve active and new messages within the “user-messages” child node by capturing the logged in user’s UID and then retrieving all messages associated with that UID as well as the “chatPartnerId” and the message content.
 
 
-<img src="Screen Shot 2020-01-16 at 12.39.39 AM.png"> 
+<img src="ChatApp_Screenshots/Screen Shot 2020-01-16 at 12.39.39 AM.png"> 
 
 **Create New | Reply To Message**<br>
 By tapping the Create New icon or selecting an active message from the messages screen, user can compose a message by tapping the ‘Enter message’ input field. The device keyboard displays once the input field is tapped.
@@ -36,14 +36,14 @@ Another feature includes the ability to send images or video by selecting the im
 In the View folder, the ChatInputContainer view controls UI for the message input field. The UserCell and ChatMessage views control the UI elements for the message content.
 
 
-<img src="Screen Shot 2020-01-16 at 12.39.50 AM.png"> 
+<img src="ChatApp_Screenshots/Screen Shot 2020-01-16 at 12.39.50 AM.png"> 
 
 **Send Image/Video Message**<br>
 By tapping the image icon from the message input controller, users can select an image or video available on their device. Once a media type is selected, the user is prompted to either cancel or choose - Tapping choose inputs the media into the message and the user can tap send to send the image or video
 
 In the ChatLogController, we utilize an imagePicker method to enable selecting an image or video. We utilize Firebase Storage to store the media file. A url of its location in Firebase is captured and sent to the recipient user. 
 
-<img src="Screen Shot 2020-01-16 at 12.39.59 AM.png"> 
+<img src="ChatApp_Screenshots/Screen Shot 2020-01-16 at 12.39.59 AM.png"> 
 
 **Firebase**<br>
 The app utilizes three services provided by Firebase Authentication, Realtime Database, and Storage.
@@ -54,12 +54,12 @@ Messages are assigned unique ids and the contents are stored as child node value
 User-Messages are sorted by User and as child nodes to each user, a log of messages are stored
 their for retrieval.
 
-<img src="Screen Shot 2020-01-16 at 12.40.48 AM.png"> 
+<img src="ChatApp_Screenshots/Screen Shot 2020-01-16 at 12.40.48 AM.png"> 
 
 Authentication database is used for Signing in members and those records are stored there.
 
-<img src="Screen Shot 2020-01-16 at 12.41.18 AM.png"> 
+<img src="ChatApp_Screenshots/Screen Shot 2020-01-16 at 12.41.18 AM.png"> 
 
 We use Storage to store images, video, and profile images. It is organized into those three groups respectively.
 
-<img src="Screen Shot 2020-01-16 at 12.41.28 AM.png"> 
+<img src="ChatApp_Screenshots/Screen Shot 2020-01-16 at 12.41.28 AM.png"> 
